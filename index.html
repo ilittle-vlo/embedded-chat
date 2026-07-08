@@ -16,6 +16,11 @@
     </style>
 </head>
 <body>
+	<script>
+        // 🛠️ FORCE THE PUBLIC PATH TO YOUR GITHUB PAGES DOMAIN
+        // This stops Webpack from throwing the "Automatic publicPath not supported" error
+        window.__webpack_public_path__ = "https://ilittle-vlo.github.io/embedded-chat/";
+    </script>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
