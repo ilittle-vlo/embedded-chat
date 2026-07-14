@@ -29,6 +29,9 @@
 			// Hide the standard floating bubble launcher
                 embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true; 
 
+			embeddedservice_bootstrap.settings.widgetWidth = "400px";  // Customize width (default is 320px)
+			embeddedservice_bootstrap.settings.widgetHeight = "700px"; // Customize height
+
                 //
                 window.addEventListener("onEmbeddedMessagingButtonCreated", () => {
                     console.log("Chat button structural element created. Programmatically launching chat...");
