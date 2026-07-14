@@ -27,6 +27,13 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
+			// 2. LISTEN FOR THE BOOTSTRAP TO READY UP, THEN FORCE MAXIMIZE
+                window.addEventListener("onEmbeddedMessagingReady", () => {
+                    console.log("Salesforce Chat Engine Ready. Auto-expanding...");
+                    embeddedservice_bootstrap.utilAPI.launchChat() //
+                        .catch((err) => console.error("Auto-launch failed: ", err));
+                });
+
 			embeddedservice_bootstrap.init(
 				'00DgL00000TDiQj',
 				'External_Agent_GitHub_Channel',
